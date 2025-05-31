@@ -17,6 +17,12 @@ public record FilesAppType(@NonNull String packageId,
         this(packageId, accountType, Stage.PROD);
     }
 
+    @Override
+    @NonNull
+    public String packageId() {
+        return packageId;
+    }
+
     public enum Stage {
         PROD, QA, DEV
     }
